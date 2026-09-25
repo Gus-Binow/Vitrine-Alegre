@@ -1,0 +1,75 @@
+:root {
+    --cor-primaria: #232A60;
+    --cor-primaria-escura: #171C42;
+    --cor-acao: #A6CE39;
+    --cor-fundo: #F4F5FA;
+    --cor-superficie: #FFFFFF;
+    --cor-borda: #E3E6EF;
+    --cor-texto: #2E2E2E;
+    --cor-texto-secundario: #687280;
+    --cor-alerta: #C2410C;
+    --cor-sucesso: #15803D;
+    --cor-avaliacao: #F59E0B;
+    --cor-estrela-vazia: #D8DBE4;
+    --fonte-principal: system-ui, -apple-system, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo) !important;
+    color: var(--cor-texto);
+    min-height: 100vh;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+
+  .aviso-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 320px;
+  width: 100%;
+  pointer-events: none;
+}
+
+.aviso-item {
+  background-color: #323232;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  pointer-events: auto;
+  animation: entradaAviso 0.3s ease-out forwards;
+}
+
+@keyframes entradaAviso {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
